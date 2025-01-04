@@ -21,14 +21,30 @@ module.exports = {
         path: 'email',
         type: 'string',
         length: {min:3, max: 100},
+        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     },
     title: {
         path: 'title',
         type: 'string',
         length: {min: 3, max: 300}
     },
+    name: {
+        path: 'name',
+        type: 'string',
+        length: {min: 3, max: 300}
+    },
+    classroom: {
+        path: 'classroom',
+        type: 'string',
+        length: {min: 3, max: 300}
+    },
     label: {
         path: 'label',
+        type: 'string',
+        length: {min: 3, max: 100}
+    },
+    location: {
+        path: 'location',
         type: 'string',
         length: {min: 3, max: 100}
     },
@@ -81,11 +97,12 @@ module.exports = {
         type: 'String',
         length: 13,
     },
-    email: {
+    /*email: {
         type: 'String',
         regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    },
-    number: {
+    },*/
+    vacancy: {
+        path: 'vacancy',
         type: 'Number',
         length: {min: 1, max:6},
     },
